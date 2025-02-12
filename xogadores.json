@@ -1,0 +1,43 @@
+[ {
+  "id_xogador" : 1,
+  "nome" : "Cristiano",
+  "apellidos" : "Ronaldo",
+  "posicion" : "Delantero",
+  "data_nacemento" : "1985-02-05",
+  "nacionalidade" : "Portugal"
+}, {
+  "id_xogador" : 2,
+  "nome" : "Lionel",
+  "apellidos" : "Messi",
+  "posicion" : "Delantero",
+  "data_nacemento" : "1987-05-24",
+  "nacionalidade" : "Argentina"
+}, {
+  "id_xogador" : 3,
+  "nome" : "Luis",
+  "apellidos" : "Suarez",
+  "posicion" : "Delantero",
+  "data_nacemento" : "1987-01-24",
+  "nacionalidade" : "Uruguay"
+}, {
+  "id_xogador" : 4,
+  "nome" : "David",
+  "apellidos" : "De Gea",
+  "posicion" : "Portero",
+  "data_nacemento" : "1990-11-07",
+  "nacionalidade" : "España"
+}, {
+  "id_xogador" : 5,
+  "nome" : "Eden",
+  "apellidos" : "Hazard",
+  "posicion" : "Delantero",
+  "data_nacemento" : "1991-01-07",
+  "nacionalidade" : "Belgica"
+}, {
+  "id_xogador" : 6,
+  "nome" : "Mohamed",
+  "apellidos" : "Salah",
+  "posicion" : "Delantero",
+  "data_nacemento" : "1992-06-15",
+  "nacionalidade" : "Egipto"
+} ]

@@ -1,0 +1,25 @@
+[ {
+  "id_equipo" : 1,
+  "nome" : "Real Madrid",
+  "cidade" : "Madrid"
+}, {
+  "id_equipo" : 2,
+  "nome" : "FCB Barcelona",
+  "cidade" : "Barcelona"
+}, {
+  "id_equipo" : 3,
+  "nome" : "Atletico de Madrid",
+  "cidade" : "Madrid"
+}, {
+  "id_equipo" : 4,
+  "nome" : "Manchester United",
+  "cidade" : "Manchester"
+}, {
+  "id_equipo" : 5,
+  "nome" : "Chelsea",
+  "cidade" : "Londres"
+}, {
+  "id_equipo" : 6,
+  "nome" : "Liverpool",
+  "cidade" : "Liverpool"
+} ]
