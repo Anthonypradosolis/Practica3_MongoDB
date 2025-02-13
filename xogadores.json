@@ -1,43 +1,49 @@
 [ {
-  "id_xogador" : 1,
-  "nome" : "Cristiano",
   "apellidos" : "Ronaldo",
   "posicion" : "Delantero",
-  "data_nacemento" : "1985-02-05",
+  "idEquipo" : 1,
+  "nome" : "Cristiano",
+  "id_xogador" : 1,
+  "data_nacemento" : "1985-02-05 00:00:00.0",
   "nacionalidade" : "Portugal"
 }, {
-  "id_xogador" : 2,
-  "nome" : "Lionel",
   "apellidos" : "Messi",
   "posicion" : "Delantero",
-  "data_nacemento" : "1987-05-24",
+  "idEquipo" : 2,
+  "nome" : "Lionel",
+  "id_xogador" : 2,
+  "data_nacemento" : "1987-05-24 00:00:00.0",
   "nacionalidade" : "Argentina"
 }, {
-  "id_xogador" : 3,
-  "nome" : "Luis",
   "apellidos" : "Suarez",
   "posicion" : "Delantero",
-  "data_nacemento" : "1987-01-24",
+  "idEquipo" : 3,
+  "nome" : "Luis",
+  "id_xogador" : 3,
+  "data_nacemento" : "1987-01-24 00:00:00.0",
   "nacionalidade" : "Uruguay"
 }, {
-  "id_xogador" : 4,
-  "nome" : "David",
   "apellidos" : "De Gea",
   "posicion" : "Portero",
-  "data_nacemento" : "1990-11-07",
+  "idEquipo" : 4,
+  "nome" : "David",
+  "id_xogador" : 4,
+  "data_nacemento" : "1990-11-07 00:00:00.0",
   "nacionalidade" : "España"
 }, {
-  "id_xogador" : 5,
-  "nome" : "Eden",
   "apellidos" : "Hazard",
   "posicion" : "Delantero",
-  "data_nacemento" : "1991-01-07",
+  "idEquipo" : 5,
+  "nome" : "Eden",
+  "id_xogador" : 5,
+  "data_nacemento" : "1991-01-07 00:00:00.0",
   "nacionalidade" : "Belgica"
 }, {
-  "id_xogador" : 6,
-  "nome" : "Mohamed",
   "apellidos" : "Salah",
   "posicion" : "Delantero",
-  "data_nacemento" : "1992-06-15",
+  "idEquipo" : 6,
+  "nome" : "Mohamed",
+  "id_xogador" : 6,
+  "data_nacemento" : "1992-06-15 00:00:00.0",
   "nacionalidade" : "Egipto"
 } ]

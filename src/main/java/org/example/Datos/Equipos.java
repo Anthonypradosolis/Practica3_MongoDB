@@ -2,6 +2,7 @@ package org.example.Datos;
 
 import jakarta.persistence.*;
 
+
 @Entity
 @Table(name = "Equipos")
 public class Equipos {
@@ -48,4 +49,6 @@ public class Equipos {
     public void setCidade(String cidade) {
         this.cidade = cidade;
     }
+
+
 }

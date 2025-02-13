@@ -2,7 +2,6 @@ package org.example.Hibernate.Metodos;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.example.Datos.Equipos;
 import org.example.Datos.Xogadores;
@@ -15,9 +14,9 @@ import org.hibernate.query.Query;
 import java.io.File;
 import java.io.IOException;
 import java.sql.Date;
-import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 public class MetodosEnConjunto {
 
@@ -125,8 +124,22 @@ public class MetodosEnConjunto {
 
         try (Session session = Utilidad.getSessionFactory().openSession()) {
             List<Xogadores> xogadores = session.createQuery("from Xogadores", Xogadores.class).list();
-            objectMapper.writeValue(new File(filePath), xogadores);
 
+            // Convertir a una estructura adecuada para MongoDB
+            List<Map<String, Object>> xogadoresJson = xogadores.stream().map(x -> {
+                Map<String, Object> xogadorMap = new java.util.HashMap<>();
+                xogadorMap.put("id_xogador", x.getId_xogador());
+                xogadorMap.put("nome", x.getNome());
+                xogadorMap.put("apellidos", x.getApellidos());
+                xogadorMap.put("posicion", x.getPosicion());
+                xogadorMap.put("data_nacemento", x.getData_nacemento().toString()); // Fecha como String
+                xogadorMap.put("nacionalidade", x.getNacionalidade());
+                xogadorMap.put("idEquipo", x.getIdequipo().getId_equipo()); // Solo el ID del equipo
+
+                return xogadorMap;
+            }).toList();
+
+            objectMapper.writeValue(new File(filePath), xogadoresJson);
             System.out.println("Xogadores exportados correctamente a " + filePath);
         } catch (IOException e) {
             System.out.println("Error al escribir el archivo JSON: " + e.getMessage());
@@ -134,6 +147,7 @@ public class MetodosEnConjunto {
             System.out.println("Error al exportar xogadores: " + e.getMessage());
         }
     }
+
 
     public <T> void leerJson(String filePath, Class<T[]> clazz) {
         ObjectMapper objectMapper = new ObjectMapper();

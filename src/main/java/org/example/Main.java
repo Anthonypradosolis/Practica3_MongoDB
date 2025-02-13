@@ -1,8 +1,12 @@
 package org.example;
 
+import com.mongodb.client.MongoCollection;
+import org.bson.Document;
 import org.example.Datos.Equipos;
 import org.example.Datos.Xogadores;
 import org.example.Hibernate.Metodos.MetodosEnConjunto;
+import org.example.MongoDB.BaseDatosMongoDB.MongoDBConnection;
+import org.example.MongoDB.Metodos.MetodosMongo;
 
 public class Main {
     public static void main(String[] args) {
@@ -41,17 +45,33 @@ public class Main {
         metodosEnConjunto.listarEquipos();
         metodosEnConjunto.listarXogadores();
 
-        /**
-        metodosEnConjunto.exportarEquiposAJson("equipos.json");
+
+        //metodosEnConjunto.exportarEquiposAJson("equipos.json");
         metodosEnConjunto.exportarXogadoresAJson("xogadores.json");
-        **/
+
 
         String filePathEquipos = "equipos.json";
         String filePathXogadores = "xogadores.json";
         metodosEnConjunto.leerJson(filePathEquipos,Equipos[].class);
         metodosEnConjunto.leerJson(filePathXogadores, Xogadores[].class);
 
+        MongoDBConnection database = new MongoDBConnection();
+        database.connect();
 
+        MongoCollection<Document> collection0 = database.getCollection("Equipos");
+        MongoCollection<Document> collection1 = database.getCollection("Xogadores");
+
+        MetodosMongo metodosMongo = new MetodosMongo();
+
+
+        metodosMongo.importarJSON("equipos.json", collection0);
+        metodosMongo.importarJSON("xogadores.json", collection1);
+
+
+        /**
+        metodosMongo.leerDatos(collection0);
+        metodosMongo.leerDatos(collection1);
+        **/
 
     }
 }

@@ -1,4 +1,4 @@
-package org.example.BaseDatosMongoDB;
+package org.example.MongoDB.BaseDatosMongoDB;
 
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
@@ -10,7 +10,7 @@ public class MongoDBConnection {
 
     // URI de la base de datos de MongoDB
     private static final String URI = "mongodb://localhost:27017";
-    private static final String DATABASE_NAME = "PracticaMongoDB2";
+    private static final String DATABASE_NAME = "PracticaMongoDB3";
     private MongoDatabase database;
     private MongoClient mongoClient;
 
